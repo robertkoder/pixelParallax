@@ -1,0 +1,109 @@
+
+@font-face {
+    font-family: nec_apc3;
+    src: url(/Web437_NEC_APC3_8x16.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+       text-align: center;
+    }
+  }
+
+@media screen and (min-width:450px){
+    h1 {
+        text-align: center;
+    }
+}
+    
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: nec_apc3;
+    image-rendering: pixelated;
+    -webkit-font-smoothing : none;
+    font-smooth: never;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background {
+    transform: translateZ(-10px) scale(2);
+    z-index: -3;
+}
+
+.midBack {
+    transform: translateZ(-8px) scale(1.8);
+    z-index: 2;
+}
+
+.middle {
+    transform: translateZ(-3px) scale(1.3);
+    z-index: 3;
+}
+
+.foreground {
+    transform: translateZ(-1px) scale(1.1);
+    z-index: 4;
+}
+
+.background,
+.midBack,
+.middle,
+.foreground {
+    position: absolute;
+    height: 120%;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.title {
+    transform: translateZ(-7px) scale(1.5);
+    z-index: 4;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000;
+}
+
+
+section {
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: #110D26;
+    color: white;
+    text-shadow: 
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000;
+}
+
+section p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
